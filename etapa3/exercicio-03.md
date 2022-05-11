@@ -40,8 +40,24 @@ ORDER BY professores.nome
 ```
 
 ```sql
-SELECT alunos.nome AS titulo, professores FROM 
-INNER JOIN cursos on alunos.cursos_id = cursos.id
-INNER JOIN professores on professores.cursos_id = cursos.id
+SELECT alunos.nome AS titulo, professores FROM alunos
+INNER JOIN cursos ON alunos.cursos_id = cursos.id
+INNER JOIN professores  professores.cursos_id = cursos.id
 ORDER BY alunos.nome
+```
+
+```sql
+SELECT cursos.id AS 'Quantidade de alunos', cursos.titulo FROM cursos
+INNER JOIN alunos on alunos.curso_id = cursos.id
+GROUP BY cursos.id DESC
+```
+
+```sql
+SELECT alunos.nome AS nome, primeira_nota, segunda_nota, (primeira_nota + segunda_nota)/2 AS 'Média', cursos.titulo FROM alunos
+INNER JOIN cursos ON alunos.curso_id = cursos.id
+WHERE cursos.id = 1 OR cursos.id = 2
+```
+
+```sql
+UPDATE 
 ```
