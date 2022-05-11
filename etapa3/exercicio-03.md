@@ -59,5 +59,10 @@ WHERE cursos.id = 1 OR cursos.id = 2
 ```
 
 ```sql
-UPDATE 
+UPDATE cursos SET titulo = "Adobe XD", carga = 15
+WHERE id = 4
+```
+
+```sql
+DELETE FROM alunos WHERE id = 3 AND id = 9
 ```
