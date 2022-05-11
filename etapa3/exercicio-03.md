@@ -53,16 +53,20 @@ GROUP BY cursos.id DESC
 ```
 
 ```sql
-SELECT alunos.nome AS nome, primeira_nota, segunda_nota, (primeira_nota + segunda_nota)/2 AS 'Média', cursos.titulo FROM alunos
-INNER JOIN cursos ON alunos.curso_id = cursos.id
+SELECT alunos.nome AS nome, primeira_nota, segunda_nota, (primeiraNota + segundaNota)/2 AS 'Média', cursos.titulo FROM alunos
+INNER JOIN cursos ON alunos.cursos_id = cursos.id
 WHERE cursos.id = 1 OR cursos.id = 2
 ```
 
 ```sql
-UPDATE cursos SET titulo = "Adobe XD", carga = 15
+UPDATE cursos SET titulo = "Adobe XD", cargaHoraria = 15
 WHERE id = 4
+```
+```sql
+UPDATE alunos SET curso_id = 5 WHERE
+id = 10 
 ```
 
 ```sql
-DELETE FROM alunos WHERE id = 3 AND id = 9
+DELETE FROM alunos WHERE curso_id = 3 
 ```
