@@ -41,9 +41,9 @@ ORDER BY professores.nome
 ```
 
 ```sql
-SELECT alunos.nome AS titulo, professores FROM 
-INNER JOIN cursos on alunos.cursos_id = cursos.id
-INNER JOIN professores on professores.cursos_id = cursos.id
+SELECT alunos.nome AS titulo, professores FROM alunos
+INNER JOIN cursos ON alunos.cursos_id = cursos.id
+INNER JOIN professores  professores.cursos_id = cursos.id
 ORDER BY alunos.nome
 ```
 
@@ -63,9 +63,8 @@ WHERE cursos.id = 1 OR cursos.id = 2
 UPDATE cursos SET titulo = "Adobe XD", cargaHoraria = 15
 WHERE id = 4
 ```
-
 ```sql
-UPDATE alunos SET cursos_id = 5 WHERE
+UPDATE alunos SET curso_id = 5 WHERE
 id = 10 
 ```
 
